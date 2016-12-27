@@ -15,14 +15,15 @@
     height: 100%;
     width: 100%
   }
-</style>
+  </style>
 </head>
 <body>
 
   <div class="ui container fluid">
     <div class="ui grid inner-container">
       <div class="three wide column">
-
+        <div class="ui divider hidden"></div>
+        <img src="assets/atlaschain-wide.png" alt="">
       </div>
       <div class="ui vertical divider"></div>
 
@@ -47,17 +48,17 @@
 
     // Load GeoJSON.
     map.data.loadGeoJson(
-        'https://raw.githubusercontent.com/atlaschain/geojson-helper/master/data/dubai_urban_boundary.geojson.json');
+      'https://raw.githubusercontent.com/atlaschain/geojson-helper/master/data/dubai_urban_boundary.geojson.json');
 
-    // Set the stroke width, and fill color for each polygon
-    map.data.setStyle({
-      fillColor: 'green',
-      strokeWeight: 1
-    });
-  }
-</script>
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGM3Y6Y1TH-g5nwFfZhZOgSgpwUvtA1YM&callback=initMap">
-</script>
-</body>
-</html>
+      // Set the stroke width, and fill color for each polygon
+      map.data.setStyle({
+        fillColor: 'green',
+        strokeWeight: 1
+      });
+    }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGM3Y6Y1TH-g5nwFfZhZOgSgpwUvtA1YM&callback=initMap">
+    </script>
+  </body>
+  </html>
