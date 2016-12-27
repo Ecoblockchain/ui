@@ -40,8 +40,8 @@
   var map;
   function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 4,
-      center: {lat: 55.563967, lng: 25.235001}
+      zoom: 10,
+      center: {lat: 25.239030, lng: 55.271892}
     });
 
     // Load GeoJSON.
@@ -49,7 +49,7 @@
       'https://raw.githubusercontent.com/atlaschain/geojson-helper/master/data/dubai_urban_boundary.geojson.json');
 
       // Set the stroke width, and fill color for each polygon
-      map.data.setStyle({
+      setStyle({
         fillColor: 'green',
         strokeWeight: 1
       });
