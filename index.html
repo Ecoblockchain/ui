@@ -6,18 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="assets/semantic.min.css">
+  <style type="text/css">
+  body, html, .container,.inner-container{
+    height: 100%;
+    width: 100%;
+  }
+  #map {
+    height: 100%;
+    width: 100%
+  }
+</style>
 </head>
 <body>
 
-  <div class="ui container">
-    <div class="ui grid">
+  <div class="ui container fluid">
+    <div class="ui grid inner-container">
       <div class="three wide column">
 
       </div>
       <div class="ui vertical divider"></div>
 
       <div class="thirteen wide column">
-        
+
+        <div id="map"></div>
+
       </div>
 
     </div>
@@ -25,5 +37,27 @@
 
   <script src="assets/jquery.min.js"></script>
   <script src="assets/semantic.min.js"></script>
+  <script>
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: {lat: -28, lng: 137}
+    });
+
+    // Load GeoJSON.
+    map.data.loadGeoJson(
+        'https://raw.githubusercontent.com/atlaschain/geojson-helper/master/data/dubai_urban_boundary.geojson.json');
+
+    // Set the stroke width, and fill color for each polygon
+    map.data.setStyle({
+      fillColor: 'green',
+      strokeWeight: 1
+    });
+  }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGM3Y6Y1TH-g5nwFfZhZOgSgpwUvtA1YM&callback=initMap">
+</script>
 </body>
 </html>
