@@ -9,7 +9,6 @@
   <style type="text/css">
   body, html, .container,.inner-container{
     height: 100%;
-    width: 100%;
   }
   #map {
     height: 100%;
@@ -132,8 +131,8 @@
       'https://raw.githubusercontent.com/atlaschain/geojson-helper/master/data/dubai_urban_boundary.geojson.json');
 
       // Set the stroke width, and fill color for each polygon
-      setStyle({
-        fillColor: 'green',
+    map.data.setStyle({
+        fillColor: 'white',
         strokeWeight: 1
       });
     }
