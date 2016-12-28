@@ -7,29 +7,25 @@
   <title>Document</title>
   <link rel="stylesheet" href="assets/semantic.min.css">
   <style type="text/css">
-  body, html, .container,.inner-container{
-    height: 100%;
+  .inner-container{
+    height:100vh;
   }
   #map {
     height: 100%;
-    width: 100%;
+    width: 98%;
     position: absolute !important;
-  }
-  .column {
-    padding: 0 !important;
-    margin: 0 !important;
   }
   </style>
 </head>
 <body>
 
-  <div class="ui container fluid">
+  <div class="ui fluid container">
     <div class="ui grid inner-container">
-      <div class="three wide column">
+      <div class="four wide column">
         <div class="ui divider hidden"></div>
-        <img src="assets/atlaschain-wide.png" alt="">
+        <a href="#"><img src="assets/atlaschain-wide.png" alt=""></a>
       </div>
-      <div class="thirteen wide column">
+      <div class="twelve wide column">
         <div id="map"></div>
       </div>
 
