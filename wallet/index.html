@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Wallet</title>
+  <link rel="stylesheet" href="../assets/semantic.min.css">
+  <style type="text/css">
+  .container {
+      padding: 5em 0em;
+  }
+  </style>
+
+</head>
+<body>
+
+  <div class="ui text container">
+      <h1 class="ui dividing header">My Wallet generation</h1>
+
+      <form class="ui form">
+        <div class="field">
+          <label>Enter Passkey</label>
+          <input type="password" name="password" id="password" placeholder="Password">
+        </div>
+        <button class="ui button positive" type="button" onclick="genNewWallet(document.getElementById('password').value);">Submit</button>
+      </form>
+  </div>
+
+<script src="../assets/jquery.min.js"></script>
+<script src="../assets/semantic.min.js"></script>
+<script type="text/javascript" src="js/etherwallet-static.min.js"></script>
+<script type="text/javascript" src="js/etherwallet-master.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
